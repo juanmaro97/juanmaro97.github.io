@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">A placeholder image for Juan Manuel Romo's portfolio photo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18233c"/>
+      <stop offset="1" stop-color="#101621"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#aab5ff"/>
+      <stop offset="1" stop-color="#79e5d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="365" r="190" fill="#8b9cff" opacity=".1"/>
+  <circle cx="400" cy="340" r="112" fill="url(#accent)" opacity=".88"/>
+  <path d="M172 870c20-177 106-267 228-267s208 90 228 267" fill="url(#accent)" opacity=".72"/>
+  <text x="400" y="950" fill="#edf3fb" font-family="Arial,sans-serif" font-size="34" text-anchor="middle" letter-spacing="7">YOUR PHOTO HERE</text>
+</svg>

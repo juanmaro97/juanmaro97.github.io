@@ -2,43 +2,72 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const skills = [
-  { title: "Generative AI & LLMs", items: ["LLM applications", "Prompt engineering", "RAG", "Embeddings", "Evaluation"] },
-  { title: "Machine Learning", items: ["Python", "Deep learning", "NLP", "Computer vision", "Data science"] },
-  { title: "AI Engineering", items: ["AI agents", "Tool calling", "Workflow orchestration", "API integration", "Information extraction"] },
-  { title: "Cloud & MLOps", items: ["Google Cloud", "AWS", "Vertex AI", "Docker", "CI/CD"] },
+  { title: "Cloud computing", items: ["Google Cloud", "AWS", "Azure"] },
+  { title: "Backend development", items: ["Python", "FastAPI", "FastMCP", "REST APIs", "Redis", "PostgreSQL", "MongoDB", "Git", "GitHub", "Pytest"] },
+  { title: "AI agent architecture", items: ["LangChain", "LangGraph", "LlamaIndex", "CrewAI", "ADK", "MCP", "RAG", "Function & tool calling"] },
+  { title: "Evaluation & MLOps / LLMOps", items: ["Ragas", "DeepEval", "LangSmith", "LangFuse", "OTEL", "DVC", "GitHub Actions", "Docker"] },
 ];
+
+const experience = [
+  {
+    company: "Banco Davivienda",
+    role: "AI First Engineer",
+    period: "2026 – Present",
+    description: "Designing and implementing Generative AI services, with a focus on AI agent frameworks for business units and customer service operations. Building evaluation, monitoring and oversight frameworks for agent-based services in production.",
+  },
+  {
+    company: "Banco Davivienda",
+    role: "Unstructured Data Analytics Specialist",
+    period: "2021 – 2026",
+    description: "Researched, developed and implemented AI solutions for banking, applying generative language models, computer vision, machine learning, edge computing and audio processing.",
+  },
+  {
+    company: "CENICAÑA",
+    role: "Industrial Process Engineer",
+    period: "2021",
+    description: "Developed a software tool for dynamic simulation of PID automatic control systems in sugarcane juice evaporation and filtration processes. Designed and assembled electronic circuit boards for automatic control applications.",
+  },
+];
+
+const education = [
+  { program: "Bachelor’s Degree in Electronic Engineering", institution: "Universidad del Valle", period: "2015 – 2021" },
+  { program: "Digital Transformation and Leadership", institution: "Massachusetts Institute of Technology", period: "2020" },
+  { program: "English Language Studies", institution: "Universidad de Nariño", period: "2010 – 2012" },
+];
+
+const softSkills = ["Collaborative teamwork", "Proactiveness", "Cross-functional communication", "Fast learning & adaptability", "Business acumen", "Technology risk management"];
 
 const projects = [
   {
     number: "01",
     type: "CONVERSATIONAL AI · SPEECH ANALYTICS",
     title: "Conversational Intelligence Pipeline",
-    description: "An end-to-end approach to transform large volumes of audio conversations into structured information and actionable business insights.",
+    description: "An end-to-end approach to transform audio conversations into structured information and actionable business insights.",
     details: ["Audio transcription and diarization", "LLM-powered information extraction", "Structured outputs for downstream analytics"],
-    stack: ["Python", "Whisper", "LLMs", "Cloud Storage"],
-    note: "Professional experience · anonymized"
+    stack: ["Python", "Audio processing", "LLMs", "Cloud"],
+    note: "Professional experience · anonymized",
   },
   {
     number: "02",
     type: "GENERATIVE AI · KNOWLEDGE RETRIEVAL",
     title: "Knowledge-grounded AI Assistant",
     description: "A retrieval-augmented generation architecture designed to answer questions using relevant context from curated knowledge sources.",
-    details: ["Document ingestion and chunking", "Vector embeddings and semantic retrieval", "Context-aware response generation"],
-    stack: ["Python", "RAG", "Vector Search", "LLMs"],
-    note: "Architecture showcase"
+    details: ["Document ingestion and chunking", "Embeddings and semantic retrieval", "Context-aware response generation"],
+    stack: ["Python", "RAG", "Vector search", "LLMs"],
+    note: "Architecture showcase",
   },
   {
     number: "03",
     type: "AGENTIC AI · AUTOMATION",
     title: "Tool-using Conversational Agent",
     description: "A modular conversational assistant that interprets user intent, selects tools and coordinates multi-step workflows.",
-    details: ["Tool and API integration", "Conversation flow orchestration", "Evaluation and human handoff considerations"],
-    stack: ["Python", "LLMs", "APIs", "Agent Workflows"],
-    note: "Architecture showcase"
+    details: ["Tool and API integration", "Conversation workflow orchestration", "Evaluation and human handoff"],
+    stack: ["Python", "MCP", "LLMs", "Agent workflows"],
+    note: "Architecture showcase",
   },
 ];
 ---
-<BaseLayout>
+<BaseLayout title="Juan Manuel Romo | Generative AI Engineer" description="Juan Manuel Romo is an Electronic Engineer and Generative AI Engineer building enterprise AI agents, machine learning and cloud solutions.">
   <div class="relative overflow-hidden">
     <div class="soft-grid pointer-events-none absolute inset-0 opacity-70"></div>
     <header class="relative z-10 border-b border-white/[0.07]">
@@ -54,176 +83,161 @@ const projects = [
           <a class="nav-link" href="#experience">Experience</a>
           <a class="nav-link" href="#contact">Contact</a>
         </div>
-        <a class="button-secondary !px-4 !py-2 text-xs" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        <a class="button-secondary !px-4 !py-2 text-xs" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main>
-      <section id="home" class="container-shell relative grid min-h-[690px] items-center gap-12 py-24 lg:grid-cols-[1.25fr_.75fr] lg:py-32">
+      <section id="home" class="container-shell relative grid min-h-[650px] items-center gap-12 py-20 lg:grid-cols-[1.2fr_.8fr] lg:py-28">
         <div class="relative z-[1]">
           <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[0.06] px-3 py-2 text-xs text-emerald-200">
             <span class="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_#6ee7b7]"></span>
-            AI ENGINEER · OPEN TO MEANINGFUL CHALLENGES
+            GENERATIVE AI ENGINEER · BOGOTÁ, COLOMBIA
           </div>
-          <p class="eyebrow mb-5">Hello, I'm Juan Romo</p>
+          <p class="eyebrow mb-5">Hello, I’m Juan Manuel Romo</p>
           <h1 class="max-w-4xl text-5xl leading-[1.04] font-extrabold tracking-[-.055em] sm:text-6xl lg:text-[5.2rem]">
-            Engineering <span class="gradient-text">intelligent</span> solutions with AI.
+            Building <span class="gradient-text">generative AI</span> for the real world.
           </h1>
           <p class="muted mt-7 max-w-2xl text-base leading-8 sm:text-lg">
-            Electronic Engineer focused on Generative AI, LLM-powered applications, machine learning and cloud-based intelligent systems — turning complex data into practical solutions.
+            Electronic Engineer focused on enterprise-grade Generative AI. I design and develop AI agents, computer vision and audio solutions, and the evaluation and monitoring systems that help them work reliably in production.
           </p>
           <div class="mt-9 flex flex-wrap gap-3">
-            <a class="button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-            <a class="button-secondary" href="#contact">Get in touch</a>
+            <a class="button-primary" href="#experience">View my experience <span aria-hidden="true">↘</span></a>
+            <a class="button-secondary" href="mailto:juanmaro1104@gmail.com">Get in touch</a>
           </div>
           <div class="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-xs font-medium tracking-wide text-slate-400">
-            <span>GENERATIVE AI</span><span>LLM ENGINEERING</span><span>MACHINE LEARNING</span><span>CLOUD</span>
+            <span>GENERATIVE AI</span><span>AI AGENTS</span><span>MACHINE LEARNING</span><span>CLOUD</span>
           </div>
         </div>
 
         <div class="relative mx-auto w-full max-w-[390px]">
           <div class="absolute -inset-8 rounded-full bg-indigo-500/10 blur-3xl"></div>
-          <div class="glass relative rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center justify-between border-b border-white/10 pb-4">
-              <span class="text-xs font-semibold tracking-widest text-slate-400">ENGINEERING PROFILE</span>
-              <span class="text-xs text-emerald-300">● AVAILABLE</span>
-            </div>
-            <div class="mt-6 space-y-5 font-mono text-xs">
-              <div class="text-slate-500">// What I work on</div>
-              <div><span class="text-indigo-300">const</span> <span class="text-cyan-200">focus</span> = [</div>
-              <div class="space-y-3 pl-5">
-                <p><span class="text-emerald-200">"generative-ai"</span>,</p>
-                <p><span class="text-emerald-200">"llm-applications"</span>,</p>
-                <p><span class="text-emerald-200">"intelligent-agents"</span>,</p>
-                <p><span class="text-emerald-200">"machine-learning"</span>,</p>
-                <p><span class="text-emerald-200">"cloud-engineering"</span></p>
-              </div>
-              <div>];</div>
-              <div class="my-5 h-px bg-white/10"></div>
-              <div class="text-slate-500">// My approach</div>
-              <div class="leading-7 text-slate-300">
-                <span class="text-violet-300">build</span>(<span class="text-emerald-200">"useful AI"</span>)<br />
-                <span class="text-violet-300">measure</span>(<span class="text-emerald-200">"real impact"</span>)<br />
-                <span class="text-violet-300">improve</span>(<span class="text-emerald-200">"continuously"</span>)
-              </div>
-              <div class="flex items-center gap-2 pt-2 text-slate-500"><span class="h-2 w-2 animate-pulse rounded-full bg-indigo-300"></span> building what comes next<span class="text-indigo-300">_</span></div>
+          <div class="glass relative overflow-hidden rounded-3xl p-3">
+            <img src="/profile-placeholder.svg" alt="Portrait placeholder for Juan Manuel Romo" class="aspect-[4/5] w-full rounded-2xl object-cover" />
+            <div class="absolute inset-x-3 bottom-3 rounded-b-2xl bg-gradient-to-t from-[#080b12] via-[#080b12]/80 to-transparent px-6 pb-6 pt-16">
+              <p class="text-xs font-semibold tracking-widest text-emerald-200">GENERATIVE AI ENGINEER</p>
+              <p class="mt-2 text-2xl font-semibold">Juan Manuel Romo</p>
+              <p class="mt-1 text-sm text-slate-300">Bogotá, Colombia</p>
             </div>
           </div>
-          <div class="absolute -right-4 -bottom-5 rounded-2xl border border-white/10 bg-[#111925] px-4 py-3 shadow-xl sm:-right-8">
-            <p class="text-[10px] tracking-widest text-slate-500">BASED IN</p>
-            <p class="mt-1 text-sm font-semibold">Bogotá, Colombia</p>
+          <div class="absolute -right-3 -top-4 rounded-2xl border border-white/10 bg-[#111925] px-4 py-3 shadow-xl sm:-right-7">
+            <p class="text-[10px] tracking-widest text-slate-500">EXPERIENCE</p>
+            <p class="mt-1 text-sm font-semibold">AI in financial services</p>
           </div>
         </div>
       </section>
 
-    <section id="about" class="section-space border-t border-white/[0.06]">
-      <div class="container-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
-        <div><p class="eyebrow mb-4">01 / About</p><h2 class="section-title">Curiosity meets <span class="gradient-text">engineering.</span></h2></div>
-        <div class="space-y-5 text-[15px] leading-8 text-slate-300">
-          <p>I'm an Electronic Engineer with a strong interest in the intersection of artificial intelligence, data and software engineering. My work focuses on designing solutions that make complex information more accessible, useful and actionable.</p>
-          <p>I work across the lifecycle of AI-powered applications: understanding the problem, shaping the data, designing the architecture, integrating models and evaluating the resulting solution.</p>
-          <p class="text-slate-400">I believe useful AI is not just about choosing a powerful model. It's about building reliable systems around it.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="expertise" class="section-space border-t border-white/[0.06] bg-white/[0.015]">
-      <div class="container-shell">
-        <div class="mb-12 max-w-2xl"><p class="eyebrow mb-4">02 / Expertise</p><h2 class="section-title">A practical <span class="gradient-text">technical toolkit.</span></h2><p class="muted mt-5 leading-7">The methods, tools and technologies I use to design and deliver intelligent applications.</p></div>
-        <div class="grid gap-4 sm:grid-cols-2">
-          {skills.map((group, index) => (
-            <article class="card p-6 sm:p-7">
-              <div class="mb-6 flex items-center justify-between"><span class="text-sm font-semibold">{group.title}</span><span class="font-mono text-xs text-indigo-300">0{index + 1}</span></div>
-              <div class="flex flex-wrap gap-2">{group.items.map((item) => <span class="pill">{item}</span>)}</div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section-space border-t border-white/[0.06]">
-      <div class="container-shell">
-        <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-          <div><p class="eyebrow mb-4">03 / Selected work</p><h2 class="section-title">Turning ideas into <span class="gradient-text">systems.</span></h2></div>
-          <p class="muted max-w-md text-sm leading-7">A selection of solution patterns and areas of work. Professional examples are intentionally anonymized where needed.</p>
-        </div>
-        <div class="grid gap-5">
-          {projects.map((project) => (
-            <article class="card grid gap-6 p-6 md:grid-cols-[.35fr_1fr] md:p-8">
-              <div class="flex items-start justify-between md:block"><span class="font-mono text-4xl font-light text-indigo-300/70">{project.number}</span><span class="pill md:mt-8">{project.note}</span></div>
-              <div>
-                <p class="eyebrow !text-[.65rem]">{project.type}</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-tight">{project.title}</h3>
-                <p class="muted mt-3 max-w-3xl text-sm leading-7">{project.description}</p>
-                <ul class="mt-5 grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-                  {project.details.map((detail) => <li class="flex gap-2"><span class="text-emerald-300">↳</span>{detail}</li>)}
-                </ul>
-                <div class="mt-6 flex flex-wrap gap-2">{project.stack.map((item) => <span class="pill !text-xs">{item}</span>)}</div>
-              </div>
-            </article>
-          ))}
-        </div>
-        <p class="mt-5 text-xs leading-6 text-slate-500">Note: These entries describe areas of work and illustrative architectures. Add links to public repositories or demos only when they are available and safe to share.</p>
-      </div>
-    </section>
-
-    <section id="experience" class="section-space border-t border-white/[0.06] bg-white/[0.015]">
-      <div class="container-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
-        <div><p class="eyebrow mb-4">04 / Experience</p><h2 class="section-title">Building with <span class="gradient-text">purpose.</span></h2><p class="muted mt-5 text-sm leading-7">Professional experience at the intersection of data, technology and business challenges.</p></div>
-        <div class="timeline-line ml-2 space-y-10 pl-8">
-          <article class="relative">
-            <span class="dot absolute -left-[2.34rem] top-1"></span>
-            <p class="text-xs tracking-widest text-indigo-300">FINANCIAL SERVICES · COLOMBIA</p>
-            <h3 class="mt-2 text-xl font-semibold">AI & Data Engineering</h3>
-            <p class="muted mt-1 text-sm">Professional experience · Add exact title and dates</p>
-            <p class="mt-4 text-sm leading-7 text-slate-300">Contributing to data and AI initiatives involving unstructured information, analytics, risk and data governance. Focused on applying machine learning and generative AI techniques to transform complex information into structured insights.</p>
-          </article>
-          <article class="relative">
-            <span class="dot absolute -left-[2.34rem] top-1"></span>
-            <p class="text-xs tracking-widest text-indigo-300">EDUCATION</p>
-            <h3 class="mt-2 text-xl font-semibold">Electronic Engineering</h3>
-            <p class="muted mt-1 text-sm">Add university name and graduation year</p>
-            <p class="mt-4 text-sm leading-7 text-slate-300">Engineering foundation complemented by continued learning in data science, machine learning, deep learning and cloud technologies.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications" class="section-space border-t border-white/[0.06]">
-      <div class="container-shell">
-        <p class="eyebrow mb-4">05 / Certifications</p>
-        <h2 class="section-title mb-9">Learning, <span class="gradient-text">validated.</span></h2>
-        <article class="card flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div><p class="text-xs tracking-widest text-slate-400">GOOGLE CLOUD</p><h3 class="mt-2 text-lg font-semibold">Associate Cloud Engineer</h3><p class="muted mt-1 text-sm">Google Cloud · Credential earned</p></div>
-          <span class="pill w-fit">Cloud certification</span>
-        </article>
-        <p class="muted mt-4 text-xs">Add credential verification links and any additional certifications here.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section-space border-t border-white/[0.06]">
-      <div class="container-shell">
-        <div class="glass relative overflow-hidden rounded-3xl p-8 sm:p-12 lg:p-16">
-          <div class="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl"></div>
-          <div class="relative max-w-2xl">
-            <p class="eyebrow mb-4">06 / Contact</p>
-            <h2 class="section-title">Have an interesting <span class="gradient-text">challenge?</span></h2>
-            <p class="muted mt-5 max-w-xl leading-7">I'm always interested in exchanging ideas and exploring opportunities to build useful technology. Let's connect.</p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <!-- Replace the placeholder email with your professional email. -->
-              <a class="button-primary" href="mailto:YOUR_EMAIL@example.com">Email me <span aria-hidden="true">↗</span></a>
-              <a class="button-secondary" href="https://github.com/juanmaro97" target="_blank" rel="noreferrer">GitHub ↗</a>
-              <!-- Replace # with your LinkedIn profile URL. -->
-              <a class="button-secondary" href="#" aria-label="Add your LinkedIn profile URL">LinkedIn ↗</a>
-            </div>
+      <section id="about" class="section-space border-t border-white/[0.06]">
+        <div class="container-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+          <div><p class="eyebrow mb-4">01 / About</p><h2 class="section-title">Engineering <span class="gradient-text">useful AI.</span></h2></div>
+          <div class="space-y-5 text-[15px] leading-8 text-slate-300">
+            <p>I’m an Electronic Engineer specializing in Artificial Intelligence, with experience designing and developing enterprise-grade Generative AI solutions and services.</p>
+            <p>I work across the full solution lifecycle—from autonomous conversational agents, computer vision and audio processing to evaluation, monitoring and oversight in production environments.</p>
+            <p class="text-slate-400">My focus is building reliable AI systems that address real business needs and can be measured, monitored and continuously improved.</p>
           </div>
         </div>
-        <footer class="flex flex-col gap-3 py-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Juan Romo. Built with Astro.</span>
-          <a class="nav-link" href="#home">Back to top ↑</a>
-        </footer>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <section id="expertise" class="section-space border-t border-white/[0.06] bg-white/[0.015]">
+        <div class="container-shell">
+          <div class="mb-12 max-w-2xl"><p class="eyebrow mb-4">02 / Expertise</p><h2 class="section-title">A practical <span class="gradient-text">technical toolkit.</span></h2><p class="muted mt-5 leading-7">Technologies and methods I use to design, build and operate AI services.</p></div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            {skills.map((group, index) => (
+              <article class="card p-6 sm:p-7">
+                <div class="mb-6 flex items-center justify-between"><span class="text-sm font-semibold">{group.title}</span><span class="font-mono text-xs text-indigo-300">0{index + 1}</span></div>
+                <div class="flex flex-wrap gap-2">{group.items.map((item) => <span class="pill">{item}</span>)}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-space border-t border-white/[0.06]">
+        <div class="container-shell">
+          <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div><p class="eyebrow mb-4">03 / Selected work</p><h2 class="section-title">Turning ideas into <span class="gradient-text">systems.</span></h2></div>
+            <p class="muted max-w-md text-sm leading-7">Examples represent solution patterns and areas of work. Professional details are anonymized where needed.</p>
+          </div>
+          <div class="grid gap-5">
+            {projects.map((project) => (
+              <article class="card grid gap-6 p-6 md:grid-cols-[.35fr_1fr] md:p-8">
+                <div class="flex items-start justify-between md:block"><span class="font-mono text-4xl font-light text-indigo-300/70">{project.number}</span><span class="pill md:mt-8">{project.note}</span></div>
+                <div>
+                  <p class="eyebrow !text-[.65rem]">{project.type}</p>
+                  <h3 class="mt-3 text-2xl font-semibold tracking-tight">{project.title}</h3>
+                  <p class="muted mt-3 max-w-3xl text-sm leading-7">{project.description}</p>
+                  <ul class="mt-5 grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
+                    {project.details.map((detail) => <li class="flex gap-2"><span class="text-emerald-300">↳</span>{detail}</li>)}
+                  </ul>
+                  <div class="mt-6 flex flex-wrap gap-2">{project.stack.map((item) => <span class="pill !text-xs">{item}</span>)}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p class="mt-5 text-xs leading-6 text-slate-500">These entries describe areas of work and illustrative architectures. Public project links can be added when available and appropriate to share.</p>
+        </div>
+      </section>
+
+      <section id="experience" class="section-space border-t border-white/[0.06] bg-white/[0.015]">
+        <div class="container-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+          <div><p class="eyebrow mb-4">04 / Experience</p><h2 class="section-title">Building with <span class="gradient-text">purpose.</span></h2><p class="muted mt-5 text-sm leading-7">AI, engineering and technology experience across financial services and industrial processes.</p></div>
+          <div class="timeline-line ml-2 space-y-10 pl-8">
+            {experience.map((job) => (
+              <article class="relative">
+                <span class="dot absolute -left-[2.34rem] top-1"></span>
+                <p class="text-xs tracking-widest text-indigo-300">{job.company.toUpperCase()} · {job.period.toUpperCase()}</p>
+                <h3 class="mt-2 text-xl font-semibold">{job.role}</h3>
+                <p class="mt-4 text-sm leading-7 text-slate-300">{job.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section-space border-t border-white/[0.06]">
+        <div class="container-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+          <div><p class="eyebrow mb-4">05 / Education</p><h2 class="section-title">Learning through <span class="gradient-text">engineering.</span></h2></div>
+          <div class="grid gap-4">
+            {education.map((item) => (
+              <article class="card p-6">
+                <p class="text-xs tracking-widest text-indigo-300">{item.period}</p>
+                <h3 class="mt-2 text-lg font-semibold">{item.program}</h3>
+                <p class="muted mt-1 text-sm">{item.institution}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="more" class="border-t border-white/[0.06] bg-white/[0.015] py-12">
+        <div class="container-shell grid gap-10 md:grid-cols-2">
+          <div><p class="eyebrow mb-4">Beyond the code</p><h2 class="text-xl font-semibold">How I work</h2><div class="mt-5 flex flex-wrap gap-2">{softSkills.map((skill) => <span class="pill">{skill}</span>)}</div></div>
+          <div><p class="eyebrow mb-4">Languages</p><h2 class="text-xl font-semibold">English · Advanced proficiency (C2)</h2></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-space border-t border-white/[0.06]">
+        <div class="container-shell">
+          <div class="glass relative overflow-hidden rounded-3xl p-8 sm:p-12 lg:p-16">
+            <div class="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl"></div>
+            <div class="relative max-w-2xl">
+              <p class="eyebrow mb-4">06 / Contact</p>
+              <h2 class="section-title">Let’s build something <span class="gradient-text">meaningful.</span></h2>
+              <p class="muted mt-5 max-w-xl leading-7">Interested in Generative AI, AI agents or building reliable AI services? I’d be glad to connect.</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a class="button-primary" href="mailto:juanmaro1104@gmail.com">Email Juan <span aria-hidden="true">↗</span></a>
+                <a class="button-secondary" href="https://github.com/juanmaro97" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a class="button-secondary" href="https://www.linkedin.com/in/juan-romo97/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              </div>
+              <p class="mt-5 text-sm text-slate-400">Bogotá, Colombia · <a class="nav-link" href="tel:+573168781717">+57 316 878 1717</a></p>
+            </div>
+          </div>
+          <footer class="flex flex-col gap-3 py-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <span>© {new Date().getFullYear()} Juan Manuel Romo. Built with Astro.</span>
+            <a class="nav-link" href="#home">Back to top ↑</a>
+          </footer>
+        </div>
+      </section>
+    </main>
   </div>
 </BaseLayout>
